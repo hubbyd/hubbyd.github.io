@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -13,8 +12,8 @@
         }
 
         body {
-            background: linear-gradient(125deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.55)),
-                url('./1680747969971_1a409513.jpg');
+            background: linear-gradient(125deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.55)), 
+                        url('./1680747969971_1a409513.jpg');
             background-size: cover;
             background-attachment: fixed;
             background-position: center 30%;
@@ -42,7 +41,6 @@
             justify-content: flex-end;
             margin-bottom: 1rem;
         }
-
         .logout-btn {
             background: rgba(0, 0, 0, 0.55);
             backdrop-filter: blur(8px);
@@ -58,7 +56,6 @@
             align-items: center;
             gap: 6px;
         }
-
         .logout-btn:hover {
             background: #c74e08cc;
             border-color: #ffb485;
@@ -71,7 +68,6 @@
             text-align: center;
             margin: 1rem 0 1.2rem;
         }
-
         .hero h1 {
             font-size: 3.2rem;
             font-weight: 700;
@@ -80,9 +76,8 @@
             -webkit-background-clip: text;
             color: transparent;
             letter-spacing: -0.5px;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
         .hero .greeting-sub {
             font-size: 1rem;
             color: #ddcfb0;
@@ -104,7 +99,6 @@
             padding: 1.2rem 1.8rem;
             margin: 1rem 0 1.5rem;
         }
-
         .lead {
             font-size: 1.3rem;
             font-weight: 500;
@@ -112,7 +106,6 @@
             color: #FFDEB3;
             margin-bottom: 1rem;
         }
-
         p {
             font-size: 1rem;
             line-height: 1.65;
@@ -120,7 +113,6 @@
             font-family: inherit;
             color: #f5ede0;
         }
-
         .bio-desc {
             margin-top: 0.75rem;
         }
@@ -133,7 +125,6 @@
             justify-content: center;
             margin: 2rem 0 1.8rem;
         }
-
         .card-link {
             background: rgba(30, 40, 55, 0.7);
             backdrop-filter: blur(4px);
@@ -144,7 +135,6 @@
             border: 1px solid rgba(255, 160, 80, 0.3);
             min-width: 130px;
         }
-
         .card-link a {
             text-decoration: none;
             font-weight: 600;
@@ -155,13 +145,11 @@
             justify-content: center;
             gap: 8px;
         }
-
         .card-link:hover {
             background: rgba(240, 107, 31, 0.5);
             transform: translateY(-4px);
             border-color: #ffb067;
         }
-
         .card-link a:hover {
             color: white;
         }
@@ -174,13 +162,11 @@
             margin: 1.5rem 0;
             text-align: center;
         }
-
         .project-section h4 {
             font-size: 1.6rem;
             color: #FFC285;
             margin-bottom: 1rem;
         }
-
         .project-badge {
             display: inline-block;
             background: #f06b1fcc;
@@ -188,7 +174,6 @@
             border-radius: 60px;
             transition: all 0.2s;
         }
-
         .project-badge a {
             color: white;
             font-weight: 600;
@@ -198,11 +183,10 @@
             align-items: center;
             gap: 10px;
         }
-
         .project-badge:hover {
             background: #f07e3a;
             transform: scale(1.02);
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.3);
         }
 
         /* 联系区域 */
@@ -210,22 +194,19 @@
             text-align: center;
             margin: 1.5rem 0 1rem;
         }
-
         .contact dt {
             font-weight: 600;
             font-size: 1.2rem;
             color: #FFCF9A;
             margin-bottom: 0.5rem;
         }
-
         .contact dd {
             margin-top: 5px;
         }
-
         .email-link {
             color: #ffbc7a;
             text-decoration: none;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0,0,0,0.4);
             padding: 5px 14px;
             border-radius: 40px;
             transition: 0.2s;
@@ -233,27 +214,24 @@
             align-items: center;
             gap: 6px;
         }
-
         .email-link:hover {
             background: #e67e22;
             color: white;
         }
 
-        /* 评论区升级 */
+        /* 评论区升级 - 每个用户只能删除自己的评论 */
         .comment-section {
             margin-top: 2rem;
             background: rgba(0, 0, 0, 0.35);
             border-radius: 1.8rem;
             padding: 1.5rem 1.5rem 1.8rem;
         }
-
         .comment-section h2 {
             font-size: 1.8rem;
             color: #FFDDB0;
             text-align: center;
             margin-bottom: 1rem;
         }
-
         .comment-box {
             display: flex;
             flex-direction: column;
@@ -261,7 +239,6 @@
             max-width: 700px;
             margin: 0 auto;
         }
-
         .comment-input {
             width: 100%;
             padding: 14px 18px;
@@ -274,18 +251,15 @@
             outline: none;
             transition: 0.2s;
         }
-
         .comment-input:focus {
             box-shadow: 0 0 0 3px #f06b1f;
             background: white;
         }
-
         .comment-actions {
             display: flex;
             justify-content: flex-end;
             gap: 12px;
         }
-
         .submit-comment {
             background: #f06b1f;
             border: none;
@@ -297,21 +271,18 @@
             transition: 0.2s;
             font-size: 0.9rem;
         }
-
         .submit-comment:hover {
             background: #d95c12;
             transform: scale(0.97);
         }
-
         .comment-list {
             margin-top: 1.8rem;
             max-height: 280px;
             overflow-y: auto;
             padding-right: 8px;
         }
-
         .single-comment {
-            background: rgba(255, 255, 240, 0.1);
+            background: rgba(255,255,240,0.1);
             backdrop-filter: blur(4px);
             padding: 10px 16px;
             border-radius: 28px;
@@ -320,34 +291,50 @@
             color: #f2e5d4;
             border-left: 4px solid #f06b1f;
         }
-
         .comment-meta {
             font-size: 0.7rem;
             color: #dbbd93;
             margin-bottom: 4px;
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
-
+        .commenter-name {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(0,0,0,0.4);
+            padding: 2px 10px;
+            border-radius: 30px;
+        }
         .delete-comment {
             background: none;
             border: none;
             color: #ffa27a;
             cursor: pointer;
             font-size: 0.7rem;
+            padding: 4px 8px;
+            border-radius: 30px;
+            transition: 0.2s;
         }
-
         .delete-comment:hover {
+            background: rgba(255, 70, 30, 0.3);
             color: #ff5e2e;
         }
-
         .empty-comments {
             text-align: center;
             color: #bcab91;
             padding: 20px;
             font-style: italic;
         }
-
+        /* 当前用户标识 */
+        .my-comment-badge {
+            background: #f06b1f40;
+            border-radius: 30px;
+            padding: 2px 8px;
+            font-size: 0.65rem;
+            margin-left: 8px;
+        }
         footer {
             text-align: center;
             font-size: 0.7rem;
@@ -360,324 +347,429 @@
             body {
                 padding: 1rem;
             }
-
             .glass-container {
                 padding: 1.2rem;
             }
-
             .hero h1 {
                 font-size: 2.2rem;
             }
-
             .lead {
                 font-size: 1.1rem;
             }
-
             .link-grid {
                 gap: 0.8rem;
             }
-
             .card-link {
                 padding: 0.6rem 1rem;
             }
         }
     </style>
 </head>
-
 <body>
-    <div class="glass-container">
-        <!-- 退出区域 -->
-        <div class="logout-area">
-            <button class="logout-btn" id="logoutBtn">🚪 退出登录</button>
-        </div>
-
-        <!-- 主视觉 -->
-        <div class="hero">
-            <h1>Hello! My Friend!</h1>
-            <div class="greeting-sub">✦ 探索 · 创造 · 联结 ✦</div>
-        </div>
-        <hr>
-
-        <div class="intro-text">
-            <div class="lead">✨ let's tell you some about this!</div>
-            <p>大家好，我是一个对生活充满热忱、对未知保持好奇的普通人。喜欢用逻辑拆解问题，也享受在细节里寻找乐趣。期待和大家真诚交流，一起探索更多有趣的可能。</p>
-            <p class="bio-desc">现专注于前端开发与交互设计，相信代码能传递温度。日常游走于技术与艺术之间，乐于分享成长中的灵感与思考。</p>
-        </div>
-
-        <!-- 兴趣链接 (skills/hobby/socializing 升级卡片) -->
-        <div class="link-grid">
-            <div class="card-link">
-                <a href="https://leetcode.cn/problems/merge-sorted-array/description/" target="_blank"
-                    rel="noopener noreferrer">
-                    ⚙️ 技能练习
-                </a>
-            </div>
-            <div class="card-link">
-                <a href="https://www.m-ssports-iqiyi.com/lanqiu/" target="_blank" rel="noopener noreferrer">
-                    🏀 热爱运动
-                </a>
-            </div>
-            <div class="card-link">
-                <a href="https://badoo.com/zh/" target="_blank" rel="noopener noreferrer">
-                    🌍 社交圈
-                </a>
-            </div>
-        </div>
-
-        <!-- 项目区域 -->
-        <div class="project-section">
-            <h4>📁 个人项目</h4>
-            <div class="project-badge">
-                <a href="To-do list.html" target="_blank">
-                    ✅ 智能待办清单
-                </a>
-            </div>
-            <p style="text-indent:0; margin-top: 12px; font-size:0.85rem;">轻量级任务管理工具 · 记录日常灵感</p>
-        </div>
-
-        <p style="text-align:center; margin: 0.5rem 0;">以上是我的一些基本情况，未来会带来更多有趣的作品 ✨</p>
-        <hr>
-
-        <!-- 联系部分 -->
-        <div class="contact">
-            <dl>
-                <dt>📬 联系我</dt>
-                <dd>
-                    <a href="https://mail.163.com/" target="_blank" class="email-link">
-                        📧 15691946991@163.com
-                    </a>
-                </dd>
-            </dl>
-        </div>
-        <hr>
-
-        <!-- 评论区（增强存储功能，保留本地留言） -->
-        <div class="comment-section">
-            <h2>💬 访客留言板</h2>
-            <div class="comment-box">
-                <textarea id="commentInput" class="comment-input" rows="2" placeholder="写下你的想法、建议或者鼓励～"></textarea>
-                <div class="comment-actions">
-                    <button id="submitCommentBtn" class="submit-comment">✍️ 发布留言</button>
-                </div>
-            </div>
-            <div id="commentListContainer" class="comment-list">
-                <!-- 动态留言会渲染到这里 -->
-                <div class="empty-comments">✨ 暂无留言，来做第一个留言的朋友吧 ✨</div>
-            </div>
-        </div>
-        <footer>
-            🧩 保持好奇 · 持续生长 | 感谢你的到访
-        </footer>
+<div class="glass-container">
+    <!-- 退出区域 -->
+    <div class="logout-area">
+        <button class="logout-btn" id="logoutBtn">🚪 退出登录</button>
     </div>
 
-    <script>
-        // ---------- 1. 登录校验 (增强体验) ----------
-        (function checkAuth() {
-            const loggedIn = localStorage.getItem('loggedIn');
-            if (!loggedIn || loggedIn !== 'true') {
-                // 未登录跳转到首页登录页 (index.html 为欢迎/登录入口)
-                window.location.href = 'index.html';
-            }
-        })();
+    <!-- 主视觉 -->
+    <div class="hero">
+        <h1>Hello! My Friend!</h1>
+        <div class="greeting-sub">✦ 探索 · 创造 · 联结 ✦</div>
+    </div>
+    <hr>
 
-        // ---------- 2. 退出功能 ----------
-        const logoutBtn = document.getElementById('logoutBtn');
-        if (logoutBtn) {
-            logoutBtn.addEventListener('click', () => {
-                localStorage.removeItem('loggedIn');
-                localStorage.removeItem('loginTime');
-                // 可选清除留言用户名相关，但保留访客留言独立性，不清除留言存储
-                window.location.href = 'index.html';
-            });
+    <div class="intro-text">
+        <div class="lead">✨ let's tell you some about this!</div>
+        <p>大家好，我是一个对生活充满热忱、对未知保持好奇的普通人。喜欢用逻辑拆解问题，也享受在细节里寻找乐趣。期待和大家真诚交流，一起探索更多有趣的可能。</p>
+        <p class="bio-desc">现专注于前端开发与交互设计，相信代码能传递温度。日常游走于技术与艺术之间，乐于分享成长中的灵感与思考。</p>
+    </div>
+
+    <!-- 兴趣链接 (skills/hobby/socializing 升级卡片) -->
+    <div class="link-grid">
+        <div class="card-link">
+            <a href="https://leetcode.cn/problems/merge-sorted-array/description/" target="_blank" rel="noopener noreferrer">
+                ⚙️ 技能练习
+            </a>
+        </div>
+        <div class="card-link">
+            <a href="https://www.m-ssports-iqiyi.com/lanqiu/" target="_blank" rel="noopener noreferrer">
+                🏀 热爱运动
+            </a>
+        </div>
+        <div class="card-link">
+            <a href="https://badoo.com/zh/" target="_blank" rel="noopener noreferrer">
+                🌍 社交圈
+            </a>
+        </div>
+    </div>
+
+    <!-- 项目区域 -->
+    <div class="project-section">
+        <h4>📁 个人项目</h4>
+        <div class="project-badge">
+            <a href="To-do list.html" target="_blank">
+                ✅ 智能待办清单
+            </a>
+        </div>
+        <p style="text-indent:0; margin-top: 12px; font-size:0.85rem;">轻量级任务管理工具 · 记录日常灵感</p>
+    </div>
+
+    <p style="text-align:center; margin: 0.5rem 0;">以上是我的一些基本情况，未来会带来更多有趣的作品 ✨</p>
+    <hr>
+
+    <!-- 联系部分 -->
+    <div class="contact">
+        <dl>
+            <dt>📬 联系我</dt>
+            <dd>
+                <a href="https://mail.163.com/" target="_blank" class="email-link">
+                    📧 15691946991@163.com
+                </a>
+            </dd>
+        </dl>
+    </div>
+    <hr>
+
+    <!-- 评论区 - 基于用户ID隔离权限，每个人只能删除自己的评论 -->
+    <div class="comment-section">
+        <h2>💬 访客留言板</h2>
+        <div class="comment-box">
+            <textarea id="commentInput" class="comment-input" rows="2" placeholder="写下你的想法、建议或者鼓励～ (所有访客可见，但你只能删除自己的评论)"></textarea>
+            <div class="comment-actions">
+                <button id="submitCommentBtn" class="submit-comment">✍️ 发布留言</button>
+            </div>
+        </div>
+        <div id="commentListContainer" class="comment-list">
+            <!-- 动态留言会渲染到这里 -->
+            <div class="empty-comments">✨ 暂无留言，来做第一个留言的朋友吧 ✨</div>
+        </div>
+    </div>
+    <footer>
+        🧩 保持好奇 · 持续生长  |  感谢你的到访
+    </footer>
+</div>
+
+<script>
+    // ---------- 1. 登录校验 ----------
+    (function checkAuth() {
+        const loggedIn = localStorage.getItem('loggedIn');
+        if (!loggedIn || loggedIn !== 'true') {
+            window.location.href = 'index.html';
         }
+    })();
 
-        // ---------- 3. 评论区增强: 本地存储留言 及 渲染 (自带时间戳/删除) ----------
-        let commentsArray = [];   // 存储 { id, text, date, nickname? 可选匿名但简单展示文本 }
+    // ---------- 2. 退出功能 ----------
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', () => {
+            localStorage.removeItem('loggedIn');
+            localStorage.removeItem('loginTime');
+            window.location.href = 'index.html';
+        });
+    }
 
-        // 加载本地评论
-        function loadCommentsFromStorage() {
-            const stored = localStorage.getItem('profile_comments');
-            if (stored) {
-                try {
-                    commentsArray = JSON.parse(stored);
-                    if (!Array.isArray(commentsArray)) commentsArray = [];
-                } catch (e) { commentsArray = []; }
-            } else {
-                // 示例初始留言 (让留言板不空旷)
-                commentsArray = [
-                    {
-                        id: Date.now() + 1,
-                        text: "期待看到更多项目更新！加油～",
-                        date: new Date(Date.now() - 86400000).toLocaleString(),
-                    },
-                    {
-                        id: Date.now() + 2,
-                        text: "前端学习路线很棒，一起进步！",
-                        date: new Date(Date.now() - 43200000).toLocaleString(),
-                    }
-                ];
-                saveCommentsToStorage();
-            }
-            renderCommentList();
+    // ---------- 3. 核心：用户识别（使用 localStorage 存储唯一访客ID，保证每个人只能删除自己的评论）----------
+    // 获取或生成当前访客的唯一ID（持久化，不会随浏览器关闭改变，除非清除站点数据）
+    function getCurrentUserId() {
+        let userId = localStorage.getItem('visitor_user_id');
+        if (!userId) {
+            // 生成一个唯一ID：时间戳 + 随机数 + 随机字符串
+            userId = 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 8);
+            localStorage.setItem('visitor_user_id', userId);
         }
+        return userId;
+    }
 
-        function saveCommentsToStorage() {
-            localStorage.setItem('profile_comments', JSON.stringify(commentsArray));
+    // 可选：获取访客昵称（如果没有昵称，显示“匿名访客”）
+    function getCurrentUserNick() {
+        let nick = localStorage.getItem('visitor_nickname');
+        if (!nick) {
+            // 简单生成一个友好的随机名称
+            const adjectives = ['星辰', '追风',  '静谧', '远航', '云游', '墨羽', '听雨', '逐光'];
+            const nouns = ['旅人', '探索者', '梦想家', '程序员', '创作者', '学习者'];
+            const randAdj = adjectives[Math.floor(Math.random() * adjectives.length)];
+            const randNoun = nouns[Math.floor(Math.random() * nouns.length)];
+            nick = randAdj + randNoun;
+            localStorage.setItem('visitor_nickname', nick);
         }
+        return nick;
+    }
 
-        // 渲染留言列表
-        function renderCommentList() {
-            const container = document.getElementById('commentListContainer');
-            if (!container) return;
-            if (!commentsArray.length) {
-                container.innerHTML = '<div class="empty-comments">📭 暂无留言，来做第一个留言的朋友吧 ✨</div>';
-                return;
+    // 修改昵称的功能（可选，让用户自定义）
+    function setUserNickname(newNick) {
+        if (newNick && newNick.trim().length > 0 && newNick.trim().length <= 20) {
+            localStorage.setItem('visitor_nickname', newNick.trim());
+            renderCommentList(); // 重新渲染以更新显示
+            showToast('✨ 昵称已更新', 1200);
+        } else {
+            showToast('昵称需为1-20个字符', 1500);
+        }
+    }
+
+    // 评论区数据结构：{ id, text, userId, nickName, timestamp, dateStr }
+    let commentsArray = [];
+
+    // 加载评论（所有用户共享，但 userId 用于权限校验）
+    function loadCommentsFromStorage() {
+        const stored = localStorage.getItem('profile_comments_secure');
+        if (stored) {
+            try {
+                commentsArray = JSON.parse(stored);
+                if (!Array.isArray(commentsArray)) commentsArray = [];
+            } catch(e) { commentsArray = []; }
+        } else {
+            // 初始示例留言（带不同 userId 模拟其他访客，展示效果）
+            const demoUser1 = 'demo_user_1';
+            const demoUser2 = 'demo_user_2';
+            commentsArray = [
+                {
+                    id: Date.now() + 101,
+                    text: "欢迎来到这个空间！期待更多精彩内容～ 🌟",
+                    userId: demoUser1,
+                    nickName: "远航旅人",
+                    timestamp: Date.now() - 172800000,
+                    dateStr: new Date(Date.now() - 172800000).toLocaleString(),
+                },
+                {
+                    id: Date.now() + 102,
+                    text: "前端学习之路共勉，加油！💪",
+                    userId: demoUser2,
+                    nickName: "追风学习者",
+                    timestamp: Date.now() - 86400000,
+                    dateStr: new Date(Date.now() - 86400000).toLocaleString(),
+                }
+            ];
+            saveCommentsToStorage();
+        }
+        renderCommentList();
+    }
+
+    function saveCommentsToStorage() {
+        localStorage.setItem('profile_comments_secure', JSON.stringify(commentsArray));
+    }
+
+    // 渲染留言列表（正确展示所有人评论，且只有当前用户自己能看到删除按钮）
+    function renderCommentList() {
+        const container = document.getElementById('commentListContainer');
+        if (!container) return;
+        const currentUserId = getCurrentUserId();
+        
+        if (!commentsArray.length) {
+            container.innerHTML = '<div class="empty-comments">📭 暂无留言，来做第一个留言的朋友吧 ✨</div>';
+            return;
+        }
+        
+        // 按时间倒序（最新的在上面）
+        const sorted = [...commentsArray].sort((a, b) => b.timestamp - a.timestamp);
+        container.innerHTML = '';
+        
+        sorted.forEach(comment => {
+            const isOwnComment = (comment.userId === currentUserId);
+            const commentDiv = document.createElement('div');
+            commentDiv.className = 'single-comment';
+            
+            // 构建元数据区
+            const metaDiv = document.createElement('div');
+            metaDiv.className = 'comment-meta';
+            
+            const nameSpan = document.createElement('span');
+            nameSpan.className = 'commenter-name';
+            nameSpan.innerHTML = `👤 ${escapeHtml(comment.nickName || '匿名访客')} · ${comment.dateStr || '未知时间'}`;
+            if (isOwnComment) {
+                const badge = document.createElement('span');
+                badge.className = 'my-comment-badge';
+                badge.innerText = '我的留言';
+                nameSpan.appendChild(badge);
             }
-            // 倒叙展示最新留言在前
-            const reversed = [...commentsArray].reverse();
-            container.innerHTML = '';
-            reversed.forEach(comment => {
-                const commentDiv = document.createElement('div');
-                commentDiv.className = 'single-comment';
-                commentDiv.innerHTML = `
-                <div class="comment-meta">
-                    <span>🌱 访客 · ${comment.date || '刚刚'}</span>
-                    <button class="delete-comment" data-id="${comment.id}">删除</button>
-                </div>
-                <div>${escapeHtml(comment.text)}</div>
-            `;
-                container.appendChild(commentDiv);
-            });
-
-            // 绑定删除事件
-            document.querySelectorAll('.delete-comment').forEach(btn => {
-                btn.addEventListener('click', (e) => {
+            
+            // 只有是自己的评论才显示删除按钮
+            if (isOwnComment) {
+                const delBtn = document.createElement('button');
+                delBtn.className = 'delete-comment';
+                delBtn.innerHTML = '🗑️ 删除';
+                delBtn.setAttribute('data-id', comment.id);
+                delBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    const id = parseInt(btn.getAttribute('data-id'));
-                    deleteCommentById(id);
+                    deleteCommentById(comment.id);
                 });
-            });
-        }
-
-        // 简单防XSS
-        function escapeHtml(str) {
-            if (!str) return '';
-            return str.replace(/[&<>]/g, function (m) {
-                if (m === '&') return '&amp;';
-                if (m === '<') return '&lt;';
-                if (m === '>') return '&gt;';
-                return m;
-            }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function (c) {
-                return c;
-            });
-        }
-
-        function deleteCommentById(id) {
-            commentsArray = commentsArray.filter(c => c.id !== id);
-            saveCommentsToStorage();
-            renderCommentList();
-            // 可加短暂提示
-            showToast('🗑️ 留言已删除', 1200);
-        }
-
-        function addNewComment(text) {
-            if (!text || text.trim() === '') {
-                showToast('💡 写点什么再发布吧', 1500);
-                return false;
+                metaDiv.appendChild(nameSpan);
+                metaDiv.appendChild(delBtn);
+            } else {
+                metaDiv.appendChild(nameSpan);
+                // 非本人评论，不显示删除按钮，但可以增加一个占位空span保持布局美观
+                const emptySpan = document.createElement('span');
+                emptySpan.style.width = '52px';
+                emptySpan.style.display = 'inline-block';
+                metaDiv.appendChild(emptySpan);
             }
-            if (text.length > 500) {
-                showToast('📏 留言长度不能超过500字', 1500);
-                return false;
-            }
-            const newComment = {
-                id: Date.now(),
-                text: text.trim(),
-                date: new Date().toLocaleString(),
-            };
-            commentsArray.push(newComment);
-            saveCommentsToStorage();
-            renderCommentList();
-            return true;
-        }
+            
+            const textDiv = document.createElement('div');
+            textDiv.innerText = comment.text;
+            
+            commentDiv.appendChild(metaDiv);
+            commentDiv.appendChild(textDiv);
+            container.appendChild(commentDiv);
+        });
+    }
 
-        // 轻提示toast
-        function showToast(msg, duration = 2000) {
-            let toast = document.getElementById('dynamicToast');
-            if (!toast) {
-                toast = document.createElement('div');
-                toast.id = 'dynamicToast';
-                toast.style.position = 'fixed';
-                toast.style.bottom = '30px';
-                toast.style.left = '50%';
-                toast.style.transform = 'translateX(-50%)';
-                toast.style.backgroundColor = '#2c2e3f';
-                toast.style.color = '#ffddb0';
-                toast.style.padding = '8px 20px';
-                toast.style.borderRadius = '40px';
-                toast.style.fontSize = '0.8rem';
-                toast.style.zIndex = '9999';
-                toast.style.backdropFilter = 'blur(10px)';
-                toast.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3)';
-                document.body.appendChild(toast);
-            }
-            toast.innerText = msg;
-            toast.style.opacity = '1';
+    // 删除评论（仅当评论的 userId 匹配当前用户时才执行）
+    function deleteCommentById(commentId) {
+        const currentUserId = getCurrentUserId();
+        const commentIndex = commentsArray.findIndex(c => c.id === commentId);
+        if (commentIndex === -1) {
+            showToast('评论不存在或已被删除', 1200);
+            return;
+        }
+        const comment = commentsArray[commentIndex];
+        if (comment.userId !== currentUserId) {
+            showToast('⚠️ 无法删除他人的评论', 1500);
+            return;
+        }
+        commentsArray.splice(commentIndex, 1);
+        saveCommentsToStorage();
+        renderCommentList();
+        showToast('✅ 已删除自己的留言', 1200);
+    }
+
+    // 添加新评论（附带当前用户的 userId 和 昵称）
+    function addNewComment(text) {
+        if (!text || text.trim() === '') {
+            showToast('💡 写点什么再发布吧', 1500);
+            return false;
+        }
+        if (text.length > 500) {
+            showToast('📏 留言长度不能超过500字', 1500);
+            return false;
+        }
+        const currentUserId = getCurrentUserId();
+        const currentNick = getCurrentUserNick();
+        const now = Date.now();
+        const newComment = {
+            id: now,
+            text: text.trim(),
+            userId: currentUserId,
+            nickName: currentNick,
+            timestamp: now,
+            dateStr: new Date(now).toLocaleString(),
+        };
+        commentsArray.push(newComment);
+        saveCommentsToStorage();
+        renderCommentList();
+        return true;
+    }
+
+    // 轻提示toast
+    function showToast(msg, duration = 2000) {
+        let toast = document.getElementById('dynamicToast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'dynamicToast';
+            toast.style.position = 'fixed';
+            toast.style.bottom = '30px';
+            toast.style.left = '50%';
+            toast.style.transform = 'translateX(-50%)';
+            toast.style.backgroundColor = '#2c2e3f';
+            toast.style.color = '#ffddb0';
+            toast.style.padding = '8px 20px';
+            toast.style.borderRadius = '40px';
+            toast.style.fontSize = '0.8rem';
+            toast.style.zIndex = '9999';
+            toast.style.backdropFilter = 'blur(10px)';
+            toast.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3)';
+            document.body.appendChild(toast);
+        }
+        toast.innerText = msg;
+        toast.style.opacity = '1';
+        toast.style.display = 'block';
+        setTimeout(() => {
+            toast.style.opacity = '0';
             setTimeout(() => {
-                toast.style.opacity = '0';
-                setTimeout(() => {
-                    if (toast.parentNode) toast.style.display = 'none';
-                    toast.style.display = 'block';
-                }, 300);
-            }, duration);
-        }
+                if (toast.parentNode) toast.style.display = 'none';
+            }, 300);
+        }, duration);
+    }
 
-        // 绑定提交事件
-        const submitBtn = document.getElementById('submitCommentBtn');
-        const commentInput = document.getElementById('commentInput');
-        if (submitBtn && commentInput) {
-            submitBtn.addEventListener('click', () => {
-                const content = commentInput.value;
-                const success = addNewComment(content);
-                if (success) {
-                    commentInput.value = '';   // 清空
-                    showToast('✨ 留言已发布，感谢分享', 1500);
-                }
-            });
-            // 支持 Ctrl+Enter 提交
-            commentInput.addEventListener('keydown', (e) => {
-                if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-                    e.preventDefault();
-                    submitBtn.click();
-                }
-            });
-        }
-
-        // 增强链接安全性：所有外部链接添加 rel 属性 已经在前面的a标签中体现，无需额外
-        // 修复背景图片加载失败降级
-        (function backgroundFallback() {
-            const imgUrl = './1680747969971_1a409513.jpg';
-            const testImg = new Image();
-            testImg.src = imgUrl;
-            testImg.onerror = () => {
-                document.body.style.background = "linear-gradient(135deg, #121826, #1f2a3e)";
-                document.body.style.backgroundAttachment = "fixed";
-            };
-        })();
-
-        // 可选：页面增加停留动画或控制台欢迎
-        console.log("%c✨ 欢迎来到星尘空间 | 探索成长与创造", "color: #ff9f4a; font-size: 14px");
-
-        // 初始化评论区数据
-        loadCommentsFromStorage();
-
-        // 如果用户从登录后跳转，添加额外保障：若本地存储登录过期，再次校验刷新时已处理
-        // 每隔一段时间检查登录态（可选无侵入）
-        setInterval(() => {
-            if (localStorage.getItem('loggedIn') !== 'true') {
-                window.location.href = 'index.html';
+    // 绑定提交事件
+    const submitBtn = document.getElementById('submitCommentBtn');
+    const commentInput = document.getElementById('commentInput');
+    if (submitBtn && commentInput) {
+        submitBtn.addEventListener('click', () => {
+            const content = commentInput.value;
+            const success = addNewComment(content);
+            if (success) {
+                commentInput.value = '';
+                showToast('✨ 留言已发布，所有访客可见', 1500);
             }
-        }, 60000); // 每分钟检查一次，防止localStorage被外部清除
-    </script>
-</body>
+        });
+        // 支持 Ctrl+Enter 提交
+        commentInput.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                e.preventDefault();
+                submitBtn.click();
+            }
+        });
+    }
 
+    // 可选：添加修改昵称的功能（可加浮动按钮，为了体验，增加一个隐藏按钮双击昵称区域，但为了简洁，加一个设置按钮在评论区右上）
+    function addNicknameChanger() {
+        const commentHeader = document.querySelector('.comment-section h2');
+        if (commentHeader && !document.getElementById('nickChangeBtn')) {
+            const nickBtn = document.createElement('button');
+            nickBtn.id = 'nickChangeBtn';
+            nickBtn.innerText = '✏️ 修改昵称';
+            nickBtn.style.background = 'rgba(240,107,31,0.6)';
+            nickBtn.style.border = 'none';
+            nickBtn.style.padding = '4px 12px';
+            nickBtn.style.borderRadius = '40px';
+            nickBtn.style.fontSize = '0.7rem';
+            nickBtn.style.marginLeft = '12px';
+            nickBtn.style.cursor = 'pointer';
+            nickBtn.style.color = 'white';
+            nickBtn.addEventListener('click', () => {
+                const newNick = prompt('请输入你的昵称（1-20个字符，所有留言将显示此昵称）:', getCurrentUserNick());
+                if (newNick && newNick.trim()) {
+                    setUserNickname(newNick);
+                }
+            });
+            commentHeader.appendChild(nickBtn);
+        }
+    }
+
+    // 防XSS
+    function escapeHtml(str) {
+        if (!str) return '';
+        return str.replace(/[&<>]/g, function(m) {
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
+            return m;
+        });
+    }
+
+    // 背景降级
+    (function backgroundFallback() {
+        const imgUrl = './1680747969971_1a409513.jpg';
+        const testImg = new Image();
+        testImg.src = imgUrl;
+        testImg.onerror = () => {
+            document.body.style.background = "linear-gradient(135deg, #121826, #1f2a3e)";
+            document.body.style.backgroundAttachment = "fixed";
+        };
+    })();
+
+    // 初始化评论区 + 添加昵称修改入口
+    loadCommentsFromStorage();
+    addNicknameChanger();
+    
+    // 定期检查登录态
+    setInterval(() => {
+        if (localStorage.getItem('loggedIn') !== 'true') {
+            window.location.href = 'index.html';
+        }
+    }, 60000);
+    
+    console.log("%c✨ 评论区已升级：每个人只能删除自己的评论，所有评论全局可见", "color: #ff9f4a; font-size: 13px");
+</script>
+</body>
 </html>
