@@ -1,114 +1,683 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>训练网页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>星尘空间 · 个人成长志</title>
     <style>
-        body
-        {
-            background-image: url(./1680747969971_1a409513.jpg);
-            background-size: 100%;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        p
-        {
-            font-size: 15px;
-            text-align:start;
-            text-indent: 2cap;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        body {
+            background: linear-gradient(125deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.55)),
+                url('./1680747969971_1a409513.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center 30%;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Roboto', 'Noto Sans', sans-serif;
+            color: #f0f3f8;
+            padding: 1.8rem 2rem 3rem;
+            min-height: 100vh;
         }
-        h1,
-        dl,
-        h2,
-        button{
+
+        /* 主容器 - 毛玻璃层 */
+        .glass-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(18, 25, 40, 0.68);
+            backdrop-filter: blur(12px);
+            border-radius: 2.5rem;
+            padding: 2rem 2rem 2.2rem;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            transition: all 0.2s;
+        }
+
+        /* 右上角退出区域 */
+        .logout-area {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 1rem;
+        }
+
+        .logout-btn {
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 200, 150, 0.4);
+            padding: 6px 18px;
+            border-radius: 40px;
+            color: #ffead5;
+            font-weight: 500;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .logout-btn:hover {
+            background: #c74e08cc;
+            border-color: #ffb485;
+            transform: scale(0.97);
+            color: white;
+        }
+
+        /* 主标题区 */
+        .hero {
+            text-align: center;
+            margin: 1rem 0 1.2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FFE6C7, #FFB347, #FF8C42);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero .greeting-sub {
+            font-size: 1rem;
+            color: #ddcfb0;
+            margin-top: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        hr {
+            margin: 1.2rem 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #ffb56b, #f0983a, #ffb56b, transparent);
+        }
+
+        /* 介绍段落 */
+        .intro-text {
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 2rem;
+            padding: 1.2rem 1.8rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .lead {
+            font-size: 1.3rem;
+            font-weight: 500;
+            text-align: center;
+            color: #FFDEB3;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.65;
+            text-indent: 2em;
+            font-family: inherit;
+            color: #f5ede0;
+        }
+
+        .bio-desc {
+            margin-top: 0.75rem;
+        }
+
+        /* 卡片网格 (兴趣/链接) */
+        .link-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            justify-content: center;
+            margin: 2rem 0 1.8rem;
+        }
+
+        .card-link {
+            background: rgba(30, 40, 55, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 2rem;
+            padding: 0.9rem 1.6rem;
+            text-align: center;
+            transition: all 0.2s;
+            border: 1px solid rgba(255, 160, 80, 0.3);
+            min-width: 130px;
+        }
+
+        .card-link a {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #ffd9a5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .card-link:hover {
+            background: rgba(240, 107, 31, 0.5);
+            transform: translateY(-4px);
+            border-color: #ffb067;
+        }
+
+        .card-link a:hover {
+            color: white;
+        }
+
+        /* 项目区域 */
+        .project-section {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 1.8rem;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
             text-align: center;
         }
-        a{
-            text-decoration:none;
+
+        .project-section h4 {
+            font-size: 1.6rem;
+            color: #FFC285;
+            margin-bottom: 1rem;
         }
-        .text-align
-        {
+
+        .project-badge {
+            display: inline-block;
+            background: #f06b1fcc;
+            padding: 0.6rem 1.5rem;
+            border-radius: 60px;
+            transition: all 0.2s;
+        }
+
+        .project-badge a {
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.05rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-badge:hover {
+            background: #f07e3a;
+            transform: scale(1.02);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 联系区域 */
+        .contact {
             text-align: center;
+            margin: 1.5rem 0 1rem;
         }
-        a:link{
-            color:black;
+
+        .contact dt {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #FFCF9A;
+            margin-bottom: 0.5rem;
         }
-        a:visited{
-            color:black;
+
+        .contact dd {
+            margin-top: 5px;
         }
-        a:hover{
-            color: red;
+
+        .email-link {
+            color: #ffbc7a;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 5px 14px;
+            border-radius: 40px;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
-        a:active{
-            color: royalblue;
+
+        .email-link:hover {
+            background: #e67e22;
+            color: white;
         }
-        .p{
-            font-size: 20px;
+
+        /* 评论区升级 */
+        .comment-section {
+            margin-top: 2rem;
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 1.8rem;
+            padding: 1.5rem 1.5rem 1.8rem;
         }
-        .text{
-            width: 1400px;
-            height: 40px;
-            line-height: 40px;
+
+        .comment-section h2 {
+            font-size: 1.8rem;
+            color: #FFDDB0;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .comment-box {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .comment-input {
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 60px;
+            border: none;
+            background: #fef7ef;
+            font-size: 0.95rem;
+            font-family: inherit;
+            resize: vertical;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .comment-input:focus {
+            box-shadow: 0 0 0 3px #f06b1f;
+            background: white;
+        }
+
+        .comment-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        .submit-comment {
+            background: #f06b1f;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .submit-comment:hover {
+            background: #d95c12;
+            transform: scale(0.97);
+        }
+
+        .comment-list {
+            margin-top: 1.8rem;
+            max-height: 280px;
+            overflow-y: auto;
+            padding-right: 8px;
+        }
+
+        .single-comment {
+            background: rgba(255, 255, 240, 0.1);
+            backdrop-filter: blur(4px);
+            padding: 10px 16px;
+            border-radius: 28px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            color: #f2e5d4;
+            border-left: 4px solid #f06b1f;
+        }
+
+        .comment-meta {
+            font-size: 0.7rem;
+            color: #dbbd93;
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .delete-comment {
+            background: none;
+            border: none;
+            color: #ffa27a;
+            cursor: pointer;
+            font-size: 0.7rem;
+        }
+
+        .delete-comment:hover {
+            color: #ff5e2e;
+        }
+
+        .empty-comments {
+            text-align: center;
+            color: #bcab91;
+            padding: 20px;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.7rem;
+            margin-top: 2rem;
+            opacity: 0.7;
+        }
+
+        /* 响应式 */
+        @media (max-width: 700px) {
+            body {
+                padding: 1rem;
+            }
+
+            .glass-container {
+                padding: 1.2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .lead {
+                font-size: 1.1rem;
+            }
+
+            .link-grid {
+                gap: 0.8rem;
+            }
+
+            .card-link {
+                padding: 0.6rem 1rem;
+            }
         }
     </style>
 </head>
+
 <body>
-    <button onclick="logout()">退出登录</button>
+    <div class="glass-container">
+        <!-- 退出区域 -->
+        <div class="logout-area">
+            <button class="logout-btn" id="logoutBtn">🚪 退出登录</button>
+        </div>
+
+        <!-- 主视觉 -->
+        <div class="hero">
+            <h1>Hello! My Friend!</h1>
+            <div class="greeting-sub">✦ 探索 · 创造 · 联结 ✦</div>
+        </div>
+        <hr>
+
+        <div class="intro-text">
+            <div class="lead">✨ let's tell you some about this!</div>
+            <p>大家好，我是一个对生活充满热忱、对未知保持好奇的普通人。喜欢用逻辑拆解问题，也享受在细节里寻找乐趣。期待和大家真诚交流，一起探索更多有趣的可能。</p>
+            <p class="bio-desc">现专注于前端开发与交互设计，相信代码能传递温度。日常游走于技术与艺术之间，乐于分享成长中的灵感与思考。</p>
+        </div>
+
+        <!-- 兴趣链接 (skills/hobby/socializing 升级卡片) -->
+        <div class="link-grid">
+            <div class="card-link">
+                <a href="https://leetcode.cn/problems/merge-sorted-array/description/" target="_blank"
+                    rel="noopener noreferrer">
+                    ⚙️ 技能练习
+                </a>
+            </div>
+            <div class="card-link">
+                <a href="https://www.m-ssports-iqiyi.com/lanqiu/" target="_blank" rel="noopener noreferrer">
+                    🏀 热爱运动
+                </a>
+            </div>
+            <div class="card-link">
+                <a href="https://badoo.com/zh/" target="_blank" rel="noopener noreferrer">
+                    🌍 社交圈
+                </a>
+            </div>
+        </div>
+
+        <!-- 项目区域 -->
+        <div class="project-section">
+            <h4>📁 个人项目</h4>
+            <div class="project-badge">
+                <a href="To-do list.html" target="_blank">
+                    ✅ 智能待办清单
+                </a>
+            </div>
+            <p style="text-indent:0; margin-top: 12px; font-size:0.85rem;">轻量级任务管理工具 · 记录日常灵感</p>
+        </div>
+
+        <p style="text-align:center; margin: 0.5rem 0;">以上是我的一些基本情况，未来会带来更多有趣的作品 ✨</p>
+        <hr>
+
+        <!-- 联系部分 -->
+        <div class="contact">
+            <dl>
+                <dt>📬 联系我</dt>
+                <dd>
+                    <a href="https://mail.163.com/" target="_blank" class="email-link">
+                        📧 15691946991@163.com
+                    </a>
+                </dd>
+            </dl>
+        </div>
+        <hr>
+
+        <!-- 评论区（增强存储功能，保留本地留言） -->
+        <div class="comment-section">
+            <h2>💬 访客留言板</h2>
+            <div class="comment-box">
+                <textarea id="commentInput" class="comment-input" rows="2" placeholder="写下你的想法、建议或者鼓励～"></textarea>
+                <div class="comment-actions">
+                    <button id="submitCommentBtn" class="submit-comment">✍️ 发布留言</button>
+                </div>
+            </div>
+            <div id="commentListContainer" class="comment-list">
+                <!-- 动态留言会渲染到这里 -->
+                <div class="empty-comments">✨ 暂无留言，来做第一个留言的朋友吧 ✨</div>
+            </div>
+        </div>
+        <footer>
+            🧩 保持好奇 · 持续生长 | 感谢你的到访
+        </footer>
+    </div>
+
     <script>
-        // 页面加载时检查登录状态
-        if (!localStorage.getItem('loggedIn')) {
-            // 未登录则跳回登录页
-            window.location.href = 'index.html';
+        // ---------- 1. 登录校验 (增强体验) ----------
+        (function checkAuth() {
+            const loggedIn = localStorage.getItem('loggedIn');
+            if (!loggedIn || loggedIn !== 'true') {
+                // 未登录跳转到首页登录页 (index.html 为欢迎/登录入口)
+                window.location.href = 'index.html';
+            }
+        })();
+
+        // ---------- 2. 退出功能 ----------
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', () => {
+                localStorage.removeItem('loggedIn');
+                localStorage.removeItem('loginTime');
+                // 可选清除留言用户名相关，但保留访客留言独立性，不清除留言存储
+                window.location.href = 'index.html';
+            });
         }
 
-        function logout() {
-            localStorage.removeItem('loggedIn');
-            window.location.href = 'index.html';
+        // ---------- 3. 评论区增强: 本地存储留言 及 渲染 (自带时间戳/删除) ----------
+        let commentsArray = [];   // 存储 { id, text, date, nickname? 可选匿名但简单展示文本 }
+
+        // 加载本地评论
+        function loadCommentsFromStorage() {
+            const stored = localStorage.getItem('profile_comments');
+            if (stored) {
+                try {
+                    commentsArray = JSON.parse(stored);
+                    if (!Array.isArray(commentsArray)) commentsArray = [];
+                } catch (e) { commentsArray = []; }
+            } else {
+                // 示例初始留言 (让留言板不空旷)
+                commentsArray = [
+                    {
+                        id: Date.now() + 1,
+                        text: "期待看到更多项目更新！加油～",
+                        date: new Date(Date.now() - 86400000).toLocaleString(),
+                    },
+                    {
+                        id: Date.now() + 2,
+                        text: "前端学习路线很棒，一起进步！",
+                        date: new Date(Date.now() - 43200000).toLocaleString(),
+                    }
+                ];
+                saveCommentsToStorage();
+            }
+            renderCommentList();
         }
+
+        function saveCommentsToStorage() {
+            localStorage.setItem('profile_comments', JSON.stringify(commentsArray));
+        }
+
+        // 渲染留言列表
+        function renderCommentList() {
+            const container = document.getElementById('commentListContainer');
+            if (!container) return;
+            if (!commentsArray.length) {
+                container.innerHTML = '<div class="empty-comments">📭 暂无留言，来做第一个留言的朋友吧 ✨</div>';
+                return;
+            }
+            // 倒叙展示最新留言在前
+            const reversed = [...commentsArray].reverse();
+            container.innerHTML = '';
+            reversed.forEach(comment => {
+                const commentDiv = document.createElement('div');
+                commentDiv.className = 'single-comment';
+                commentDiv.innerHTML = `
+                <div class="comment-meta">
+                    <span>🌱 访客 · ${comment.date || '刚刚'}</span>
+                    <button class="delete-comment" data-id="${comment.id}">删除</button>
+                </div>
+                <div>${escapeHtml(comment.text)}</div>
+            `;
+                container.appendChild(commentDiv);
+            });
+
+            // 绑定删除事件
+            document.querySelectorAll('.delete-comment').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const id = parseInt(btn.getAttribute('data-id'));
+                    deleteCommentById(id);
+                });
+            });
+        }
+
+        // 简单防XSS
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>]/g, function (m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function (c) {
+                return c;
+            });
+        }
+
+        function deleteCommentById(id) {
+            commentsArray = commentsArray.filter(c => c.id !== id);
+            saveCommentsToStorage();
+            renderCommentList();
+            // 可加短暂提示
+            showToast('🗑️ 留言已删除', 1200);
+        }
+
+        function addNewComment(text) {
+            if (!text || text.trim() === '') {
+                showToast('💡 写点什么再发布吧', 1500);
+                return false;
+            }
+            if (text.length > 500) {
+                showToast('📏 留言长度不能超过500字', 1500);
+                return false;
+            }
+            const newComment = {
+                id: Date.now(),
+                text: text.trim(),
+                date: new Date().toLocaleString(),
+            };
+            commentsArray.push(newComment);
+            saveCommentsToStorage();
+            renderCommentList();
+            return true;
+        }
+
+        // 轻提示toast
+        function showToast(msg, duration = 2000) {
+            let toast = document.getElementById('dynamicToast');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.id = 'dynamicToast';
+                toast.style.position = 'fixed';
+                toast.style.bottom = '30px';
+                toast.style.left = '50%';
+                toast.style.transform = 'translateX(-50%)';
+                toast.style.backgroundColor = '#2c2e3f';
+                toast.style.color = '#ffddb0';
+                toast.style.padding = '8px 20px';
+                toast.style.borderRadius = '40px';
+                toast.style.fontSize = '0.8rem';
+                toast.style.zIndex = '9999';
+                toast.style.backdropFilter = 'blur(10px)';
+                toast.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3)';
+                document.body.appendChild(toast);
+            }
+            toast.innerText = msg;
+            toast.style.opacity = '1';
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => {
+                    if (toast.parentNode) toast.style.display = 'none';
+                    toast.style.display = 'block';
+                }, 300);
+            }, duration);
+        }
+
+        // 绑定提交事件
+        const submitBtn = document.getElementById('submitCommentBtn');
+        const commentInput = document.getElementById('commentInput');
+        if (submitBtn && commentInput) {
+            submitBtn.addEventListener('click', () => {
+                const content = commentInput.value;
+                const success = addNewComment(content);
+                if (success) {
+                    commentInput.value = '';   // 清空
+                    showToast('✨ 留言已发布，感谢分享', 1500);
+                }
+            });
+            // 支持 Ctrl+Enter 提交
+            commentInput.addEventListener('keydown', (e) => {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                    e.preventDefault();
+                    submitBtn.click();
+                }
+            });
+        }
+
+        // 增强链接安全性：所有外部链接添加 rel 属性 已经在前面的a标签中体现，无需额外
+        // 修复背景图片加载失败降级
+        (function backgroundFallback() {
+            const imgUrl = './1680747969971_1a409513.jpg';
+            const testImg = new Image();
+            testImg.src = imgUrl;
+            testImg.onerror = () => {
+                document.body.style.background = "linear-gradient(135deg, #121826, #1f2a3e)";
+                document.body.style.backgroundAttachment = "fixed";
+            };
+        })();
+
+        // 可选：页面增加停留动画或控制台欢迎
+        console.log("%c✨ 欢迎来到星尘空间 | 探索成长与创造", "color: #ff9f4a; font-size: 14px");
+
+        // 初始化评论区数据
+        loadCommentsFromStorage();
+
+        // 如果用户从登录后跳转，添加额外保障：若本地存储登录过期，再次校验刷新时已处理
+        // 每隔一段时间检查登录态（可选无侵入）
+        setInterval(() => {
+            if (localStorage.getItem('loggedIn') !== 'true') {
+                window.location.href = 'index.html';
+            }
+        }, 60000); // 每分钟检查一次，防止localStorage被外部清除
     </script>
-    <h1>Hello! My Friend!</h1>
-    <br>
-    <hr>
-    <br>
-    <p class="p">let's tell you some about this!</p>
-    <br>
-    <p>大家好，我是一个对生活充满热忱、对未知保持好奇的普通人。喜欢用逻辑拆解问题，也享受在细节里寻找乐趣。期待和大家真诚交流，一起探索更多有趣的可能。</p>
-    <br>
-    <form>
-        <ul>
-            <div>
-                <li><a href = "https://leetcode.cn/problems/merge-sorted-array/description/">skills</a></li>
-                <br>
-                <li><a href = "https://www.m-ssports-iqiyi.com/lanqiu/">hobby</a></li>
-                <br>
-                <li><a href="https://badoo.com/zh/">socializing</a></li>
-            </div>
-        </ul>
-        <br>
-        <h4>做的一些项目</h4>
-        <div>
-            <ul>
-            <li><a href="To-do list.html">代办事项</a></li>
-            </ul>
-        </div>
-        <p>以上是我的一些基本情况</p>
-        <hr>
-        <br>
-        <footer>
-            <dl>
-                   <dt>联系我 
-                   <dd>邮箱：<a href="https://mail.163.com/">15691946991@163.com</a></dd>
-                </dt>
-            </dl>
-            <hr>
-            <h2>评论区</h2>
-            <div class="box" class="text-align">
-                <span>
-                    <textarea class="text" placeholder="请发表你的看法"></textarea>
-                    <button type="submit" class="text-align">提交</button>
-                </span>
-            </div>
-        </footer>
-    </form>
 </body>
+
 </html>
