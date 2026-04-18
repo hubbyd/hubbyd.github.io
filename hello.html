@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>训练网页</title>
+    <style>
+        body
+        {
+            background-image: url(./1680747969971_1a409513.jpg);
+            background-size: 100%;
+        }
+        p
+        {
+            font-size: 15px;
+            text-align:start;
+            text-indent: 2cap;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1,
+        dl,
+        h2,
+        button{
+            text-align: center;
+        }
+        a{
+            text-decoration:none;
+        }
+        .text-align
+        {
+            text-align: center;
+        }
+        a:link{
+            color:black;
+        }
+        a:visited{
+            color:black;
+        }
+        a:hover{
+            color: red;
+        }
+        a:active{
+            color: royalblue;
+        }
+        .p{
+            font-size: 20px;
+        }
+        .text{
+            width: 1400px;
+            height: 40px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="logout()">退出登录</button>
+    <script>
+        // 页面加载时检查登录状态
+        if (!localStorage.getItem('loggedIn')) {
+            // 未登录则跳回登录页
+            window.location.href = 'index.html';
+        }
+
+        function logout() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = 'index.html';
+        }
+    </script>
+    <h1>Hello! My Friend!</h1>
+    <br>
+    <hr>
+    <br>
+    <p class="p">let's tell you some about this!</p>
+    <br>
+    <p>大家好，我是一个对生活充满热忱、对未知保持好奇的普通人。喜欢用逻辑拆解问题，也享受在细节里寻找乐趣。期待和大家真诚交流，一起探索更多有趣的可能。</p>
+    <br>
+    <form>
+        <ul>
+            <div>
+                <li><a href = "https://leetcode.cn/problems/merge-sorted-array/description/">skills</a></li>
+                <br>
+                <li><a href = "https://www.m-ssports-iqiyi.com/lanqiu/">hobby</a></li>
+                <br>
+                <li><a href="https://badoo.com/zh/">socializing</a></li>
+            </div>
+        </ul>
+        <br>
+        <p>以上是我的一些基本情况</p>
+        <hr>
+        <br>
+        <footer>
+            <dl>
+                   <dt>联系我 
+                   <dd>邮箱：<a href="https://mail.163.com/">15691946991@163.com</a></dd>
+                </dt>
+            </dl>
+            <hr>
+            <h2>评论区</h2>
+            <div class="box" class="text-align">
+                <span>
+                    <textarea class="text" placeholder="请发表你的看法"></textarea>
+                    <button type="submit" class="text-align">提交</button>
+                </span>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
